@@ -15,12 +15,15 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private MediaPlayer mediaPlayer;
     private SurfaceHolder vidHolder;
     private SurfaceView vidSurface;
+    // Here where you place the media streaming url
     String vidAddress = "http://140.113.208.143:8080/stream";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        // if you use rstp
 //        VideoView vidView = (VideoView)findViewById(R.id.myVideo);
 //        //String vidAddress = "https://192.168.0.3:8080/stream";
 //        String vidAddress = "http://140.113.208.143:8080/stream";
@@ -34,10 +37,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 //        vidControl.setAnchorView(vidView);
 //        vidView.setMediaController(vidControl);
 //
-//
 //        vidView.start();
 
 
+        // if you use http
         vidSurface = (SurfaceView) findViewById(R.id.surfView);
         vidHolder = vidSurface.getHolder();
         vidHolder.addCallback(this);
